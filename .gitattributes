@@ -1,0 +1,2 @@
+# Hardware-only project: exclude repository files from GitHub language statistics.
+* linguist-detectable=false
