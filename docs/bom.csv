@@ -1,0 +1,13 @@
+Reference,Part or value,Quantity,Notes
+U1-U6,XD74LS74,6,Dual D-type flip-flop
+U7-U10,XD74LS08,4,Quad AND
+U11-U12,XD74LS32,2,Quad OR
+U13,XD74LS04,1,Hex inverter
+U14,XD74LS86,1,Quad XOR
+U15,SS12D00G3,1,LOAD slide switch; confirm exact footprint
+SW1,Pushbutton,1,Reset control
+P1-P2,WJ500V-5.08-2P,2,Power and clock screw terminals
+R1-R12,2.2 kOhm,12,LED current limiting
+R13-R14,1 kOhm,2,Control pull-ups
+C1,47 uF,1,Polarized supply capacitor
+OUTPUT STATEA STATEB CLK RN3 RN2 RN1 RN0 Q3 Q2 Q1 Q0,LED,12,Indicator LEDs; confirm exact parts and polarity
