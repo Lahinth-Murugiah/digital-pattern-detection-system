@@ -6,8 +6,8 @@ A gate-level synchronous digital system that generates deterministic pseudorando
 
 Developed as a group academic project for **IE3004 – Digital Systems Design (2026)**, Department of Computer Systems Engineering, Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT).
 
-<!-- The three image references will render after the original PNG exports are uploaded to assets/. -->
-![EasyEDA 3D PCB model](assets/pcb-3d.png)
+<!-- Upload the three PNG exports to the PCB Design folder to display them below. -->
+![EasyEDA 3D PCB model](PCB%20Design/pcb-3d.png)
 
 ## Key features
 
@@ -98,11 +98,11 @@ Labels are `serial bit / match` during SHIFT. The match is captured by a separat
 
 ### Circuit schematic
 
-[![EasyEDA circuit schematic](assets/schematic.png)](assets/schematic.png)
+[![EasyEDA circuit schematic](PCB%20Design/schematic.png)](PCB%20Design/schematic.png)
 
 ### Two-layer PCB routing
 
-[![EasyEDA PCB routing](assets/pcb-layout.png)](assets/pcb-layout.png)
+[![EasyEDA PCB routing](PCB%20Design/pcb-layout.png)](PCB%20Design/pcb-layout.png)
 
 The PCB export includes through-hole DIP logic packages, top and bottom copper routing, indicator LEDs, control switches, and power/clock connectors. The 3D model above is a CAD visualization, not a photograph of manufactured hardware.
 
@@ -119,13 +119,7 @@ The expected integrated test begins with reset, then captures `0001` in the PISO
 | Shift 4 | 1 | 0000 | 00 | **1** |
 | Next load | — | New word | 00 | 0 |
 
-The tables describe expected logical behavior, not measured hardware waveforms. An independent Python reference model is included to check the logic and integrated timing at an abstract clock-edge level:
-
-```bash
-python -m unittest discover -s verification -v
-```
-
-See the [verification guide](docs/verification.md) for reproducible tests, expected results and evidence requirements.
+The table describes expected logical behavior, not measured hardware waveforms.
 
 ## Tools and engineering skills
 
@@ -133,7 +127,6 @@ See the [verification guide](docs/verification.md) for reproducible tests, expec
 | --- | --- |
 | Proteus | Gate-level simulation workflow described in the project working guide |
 | EasyEDA | Schematic capture, PCB placement/routing and 3D visualization |
-| Python 3 | Supplemental executable behavioral model and unit tests |
 
 **Engineering concepts:** synchronous sequential logic, FSM design, Boolean simplification, LFSRs, shift registers, clock-edge timing, digital circuit integration, schematic capture, PCB layout and functional verification.
 
@@ -148,18 +141,11 @@ Future revisions could add an automatic load/shift controller, a data-valid sign
 
 ## Repository contents
 
-| Location | Contents |
-| --- | --- |
-| [assets/](assets/) | Original schematic, 2D routing and 3D PCB exports |
-| [docs/design.md](docs/design.md) | Architecture, Boolean equations, K-maps and IC mapping |
-| [docs/verification.md](docs/verification.md) | Test procedures, expected results and hardware review |
-| [docs/bom.csv](docs/bom.csv) | Schematic-derived component list |
-| [verification/](verification/) | Supplemental Python model and automated tests |
-| [design-files/](design-files/) | Instructions for adding editable CAD and simulation files |
+- [PCB Design](PCB%20Design/) — EasyEDA schematic, two-layer PCB routing, and 3D model.
 
 ## Project status and attribution
 
-The supplied materials document the gate-level design, simulation workflow and PCB design exports. Native CAD/simulation files, measured waveforms and photographs of a physical prototype are not included in this repository snapshot. The Python model verifies the documented equations only; it does not validate the actual routed board or replace Proteus simulation.
+The supplied materials document the gate-level design, simulation workflow and PCB design exports. Native CAD/simulation files, measured waveforms and photographs of a physical prototype are not included in this repository snapshot. The expected logic behavior does not establish physical hardware validation.
 
 This is a group academic project. Credit all contributors and confirm publication permission before making the repository public. No open-source license has been selected; reuse rights should be clarified with the contributors.
 
