@@ -6,9 +6,6 @@ A gate-level synchronous digital system that generates deterministic pseudorando
 
 Developed as a group academic project for **IE3004 – Digital Systems Design (2026)**, Department of Computer Systems Engineering, Faculty of Computing, Sri Lanka Institute of Information Technology (SLIIT).
 
-<!-- Upload the three PNG exports to the PCB Design folder to display them below. -->
-![EasyEDA 3D PCB model](PCB%20Design/pcb-3d.png)
-
 ## Key features
 
 - Four-bit linear feedback shift register (LFSR), initialized to `0001`, with a 15-state nonzero cycle.
@@ -96,16 +93,6 @@ Labels are `serial bit / match` during SHIFT. The match is captured by a separat
 | 74LS86 | Quad 2-input XOR gate | 1 |
 | **Total** | **Logic IC packages** | **14** |
 
-### Circuit schematic
-
-[![EasyEDA circuit schematic](PCB%20Design/schematic.png)](PCB%20Design/schematic.png)
-
-### Two-layer PCB routing
-
-[![EasyEDA PCB routing](PCB%20Design/pcb-layout.png)](PCB%20Design/pcb-layout.png)
-
-The PCB export includes through-hole DIP logic packages, top and bottom copper routing, indicator LEDs, control switches, and power/clock connectors. The 3D model above is a CAD visualization, not a photograph of manufactured hardware.
-
 ## Functional verification
 
 The expected integrated test begins with reset, then captures `0001` in the PISO on a single load edge before accepting four serial bits.
@@ -138,10 +125,6 @@ The table describes expected logical behavior, not measured hardware waveforms.
 - Before fabrication, review decoupling, unused logic inputs, indicator current, clock fanout, reset/switch timing, ERC/DRC and PCB manufacturing files.
 
 Future revisions could add an automatic load/shift controller, a data-valid signal, more robust hardware conditioning and measured waveform documentation.
-
-## Repository contents
-
-- [PCB Design](PCB%20Design/) — EasyEDA schematic, two-layer PCB routing, and 3D model.
 
 ## Project status and attribution
 
